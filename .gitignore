@@ -1,0 +1,33 @@
+# Dependencies & build output
+node_modules/
+dist/
+
+# Secrets (generated on first run: JWT secret + admin password)
+.env
+.env.*
+*.pem
+*.key
+
+# Raw Instagram/WhatsApp source material (not used by the app at runtime)
+chatim-import/
+assets/
+
+# Local runtime data (the app stores its DB/uploads in ~/.chatim-collections)
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.session
+uploads/
+
+# Logs & caches
+*.log
+__pycache__/
+*.pyc
+.venv/
+
+# OS / editor / local tooling
+.DS_Store
+.claude/
+.vscode/
+.idea/

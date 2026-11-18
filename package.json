@@ -1,0 +1,32 @@
+{
+  "name": "chatim-collections",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Chatim Collections – full-stack jewellery e-commerce (React + Express + SQLite)",
+  "scripts": {
+    "dev": "concurrently -n api,web -c magenta,cyan \"node --disable-warning=ExperimentalWarning --watch-path=server server/index.js\" \"vite\"",
+    "build": "vite build",
+    "start": "NODE_ENV=production node --disable-warning=ExperimentalWarning server/index.js",
+    "seed": "node --disable-warning=ExperimentalWarning server/seed.js --reset",
+    "tunnel": "cloudflared tunnel --protocol http2 --url http://localhost:${PORT:-8080}",
+    "tunnel:us": "cloudflared tunnel --protocol http2 --region us --url http://localhost:${PORT:-8080}"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^7.3.1",
+    "@tanstack/react-query": "^5.108.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "autoprefixer": "^10.6.2",
+    "concurrently": "^10.0.7",
+    "postcss": "^8.5.33",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.5",
+    "tailwindcss": "^3.4.19",
+    "vite": "^8.0.9",
+    "zustand": "^5.1.0"
+  }
+}
